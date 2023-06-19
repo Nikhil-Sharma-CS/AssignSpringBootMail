@@ -15,24 +15,24 @@ import java.util.Objects;
 public class Animal {
 
     @Autowired
-    @Qualifier("Blue")
+    @Qualifier("Blue")  //This annotation means that C1 reference will point to the bean with blue tag in it
     Cat C1;
 
-    @Autowired
+    @Autowired  //This annotation means that C2 reference will point to the bean with brown tag in it
     @Qualifier("Brown")
     Cat C2;
 
     StringBuilder Objects = new StringBuilder();
 
 
-    @GetMapping("API1")
+    @GetMapping("C1Bean")     //This is get api which will return bean with reference C1
     public String getColor1()
     {
         Objects.append(C1.toString());
         return C1.getColor() + " " + C1.toString();
     }
 
-    @GetMapping("API2")
+    @GetMapping("C2Bean")     //This is get api which will return bean with reference C2
     public String getColor2()
     {
         Objects.append(C2.toString());

@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ConfigurationCat {
 
-    @Bean("Blue")
+    @Bean("Blue")       //This creates the bean of type Cat as mentioned in return statement
     public Cat getCatObject1()
     {
         System.out.println("Inside bean method getCatObject1");
